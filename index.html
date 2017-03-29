@@ -44,18 +44,85 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
       <ul id="topContacts" class="flex-box"></ul>
     </div>
     <div style="clear: both;"></div>
-    <div id="workExperience" class="gray">
+    <div id="workExperience">
       <h2>Work Experience</h2>
     </div>
-    <div id="projects">
+    <div id="projects" class="gray">
       <h2>Projects</h2>
     </div>
-    <div id="education" class="gray">
+    <div id="education">
       <h2>Education</h2>
     </div>
     <div id="mapDiv">
       <h2>Where I've Lived and Worked</h2>
     </div>
+    <div id="addin">
+      <!DOCTYPE html> 
+
+      <style>
+      .hexagon {
+        stroke: #ffffff;
+        stroke-width: 0px;
+      }
+      </style>
+
+      <svg width="1250" height="300"></svg>
+      <script src="https://d3js.org/d3.v4.min.js"></script>
+      <script src="https://d3js.org/d3-hexbin.v0.2.min.js"></script>
+
+      <script>
+      var svg = d3.select("svg"),
+          margin = {top: 20, right: 20, bottom: 30, left: 40},
+          width = +svg.attr("width") - margin.left - margin.right,
+          height = +svg.attr("height") - margin.top - margin.bottom,
+          g = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+      var randomX = d3.randomNormal(width / 2, 200),
+          randomY = d3.randomNormal(height / 2, 25),
+          points = d3.range(1200).map(function() { return [randomX(), randomY()]; });
+
+      var color = d3.scaleSequential(d3.interpolateLab("white", "darkorange"))
+          .domain([0, 60]);
+
+      var hexbin = d3.hexbin()
+          .radius(20)
+          .extent([[0, 0], [width, height]]);
+
+      var x = d3.scaleLinear()
+          .domain([0, width])
+          .range([0, width]);
+
+      var y = d3.scaleLinear()
+          .domain([0, height])
+          .range([height, 0]);
+
+      g.append("clipPath")
+          .attr("id", "clip")
+        .append("rect")
+          .attr("width", width)
+          .attr("height", height);
+
+      g.append("g")
+          .attr("class", "hexagon")
+          .attr("clip-path", "url(#clip)")
+        .selectAll("path")
+        .data(hexbin(points))
+        .enter().append("path")
+          .attr("d", hexbin.hexagon())
+          .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; })
+          .attr("fill", function(d) { return color(d.length); });
+
+      //g.append("g")
+          //.attr("class", "axis axis--y")
+          //.call(d3.axisLeft(y).tickSizeOuter(-width));
+
+      //g.append("g")
+          //.attr("class", "axis axis--x")
+          //.attr("transform", "translate(0," + height + ")")
+          //.call(d3.axisBottom(x).tickSizeOuter(-height));
+      </script>
+    </div>
+
     <div id="lets-connect" class="dark-gray">
       <h2 class="orange center-text">Let's Connect</h2>
         <ul id="footerContacts" class="flex-box">
@@ -93,7 +160,6 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   dynamically when this website, index.html, is opened.
   -->
   <script src="js/resumeBuilder.js"></script>
-
 
   <!--
   These scripts are written in JavaScript. You'll be breaking them down as part of
@@ -142,5 +208,3 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
       document.getElementById('mapDiv').style.display = 'none';
     }
   </script>
-</body>
-</html>

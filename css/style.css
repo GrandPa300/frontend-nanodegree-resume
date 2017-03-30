@@ -14,19 +14,9 @@ h6 {
   font-family: "Roboto", sans-serif;
 }
 
-.clear-fix {
-  overflow: auto;
-}
-
-.education-entry,
-.work-entry,
-.project-entry {
-  padding: 0 5%;
-}
-
 h1 {
   font-size: 40px;
-  color: #f5a623;
+  color: white;
   line-height: 48px;
   display: inline;
 }
@@ -34,16 +24,14 @@ h1 {
 h2 {
   font-weight: bold;
   font-size: 24px;
-  color: #999;
+  color: dimgray;
   line-height: 29px;
   padding: 10px;
 }
 
 h3 {
-  font-style: italic;
   font-size: 20px;
-  color: #000;
-  line-height: 22px;
+  color: dimgray; 
 }
 
 h4 {
@@ -58,25 +46,6 @@ h3,
 h4,
 h5 {
   padding: 10px 5%;
-
-}
-
-
-.date-text {
-  font-style: italic;
-  font-size: 14px;
-  color: #999;
-  line-height: 16px;
-  float: left;
-}
-
-.location-text {
-  font-style: italic;
-  font-size: 14px;
-  color: #999;
-  line-height: 16px;
-  float: right;
-
 }
 
 p {
@@ -92,49 +61,28 @@ a {
   display: block;
 }
 
-.welcome-message {
-  font-style: italic;
-  font-size: 18px;
-  color: #f3f3f3;
-  line-height: 28px;
+ul {
+  list-style-type: none;
 }
 
-#skills-h3 {
-  color: #f5ae23;
-  display: none;
+img {
+  padding: 10px;
+  max-width:100%;
+  max-height:100%;
 }
 
-.orange {
-  background-color: #f5ae23;
+span {
+  padding: 5px;
 }
 
-.orange-text {
-  color: #f5ae23;
+button {
+  margin: 0 auto;
 }
 
-.white-text {
-  font-weight: bold;
-  color: #fff;
-}
+/* define sytle of class */
 
-.gray {
-  background-color: #f3f3f3;
-  padding-bottom: 10px;
-  clear: both;
-}
-
-.dark-gray {
-  background-color: #4a4a4a;
-}
-
-/* TODO: Replace with image later */
-#header {
-  background-color: #484848;
-  padding-top: 0;
-}
-
-#topContacts {
-  padding-top: 0;
+.clear-fix {
+  overflow: auto;
 }
 
 .flex-box {
@@ -157,8 +105,20 @@ a {
   padding: 2.5% 5%;
 }
 
-ul {
-  list-style-type: none;
+.date-text {
+  font-style: italic;
+  font-size: 14px;
+  color: #999;
+  line-height: 16px;
+  float: left;
+}
+
+.location-text {
+  font-style: italic;
+  font-size: 14px;
+  color: #999;
+  line-height: 16px;
+  float: right;
 }
 
 .biopic {
@@ -168,20 +128,24 @@ ul {
   display: none;
 }
 
-img {
-  padding: 10px;
+.welcome-message {
+  font-size: 18px;
+  font-weight: bold;
+  color: sandybrown;
+  line-height: 50px;
+  position: 5%;
 }
 
-span {
-  padding: 5px;
+.work-entry,
+.education-entry, 
+.project-entry {
+  padding: 0% 5%;
+  margin: auto;
 }
 
-#lets-connect {
-  text-align: center;
-}
-
-button {
-  margin: 0 auto;
+.projectImage-entry {
+  display: table;
+  margin: auto;
 }
 
 .button {
@@ -192,6 +156,97 @@ button {
   color: #f5ae23;
   width: 10%;
   margin-left: 45%;
+}
+
+/* style of particular IDs */
+
+#skills-h3 {
+  color: dimgray;
+  display: none;
+}
+
+#main{
+  max-width: 80%;
+  margin: auto;
+}
+
+/* overlap footer over hexheader */
+#banner {
+  position: relative;
+}
+
+#hexheader{
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  position: absolute;
+}
+
+#header {
+  position: relative;
+}
+
+#topContacts {
+  padding: 0;
+  margin-bottom: 3%;
+}
+
+#workExperience{
+  position: relative;
+}
+
+/* 
+align text of lets-connect in the center 
+overlap footer over hexfooter
+*/
+
+#lets-connect {
+  text-align: center;
+  position: relative;
+}
+
+#hexfooter{
+  width: 100%;
+  height: 100%;
+  margin-top: -3%;
+  position: absolute;
+}
+
+#footer {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  margin-top: 8%;
+}
+
+/* define colors*/
+
+.deepskyblue-text {
+  color: deepskyblue;
+}
+
+.blue-text{
+  color: #1199c3;
+}
+
+.white-text {
+  font-weight: bold;
+  color: #fff;
+}
+
+.gray-text {
+  font-weight: bold;
+  color: dimgray;
+}
+
+.mint {
+  background-color: #f6faeb;
+  padding-bottom: 10px;
+  clear: both;
+}
+
+.dark-gray {
+  background-color: #4a4a4a;
 }
 
 /* Media queries to handle various device widths */

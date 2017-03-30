@@ -4,9 +4,16 @@
  	{
  		"employer" : "Place Taker Company",
  		"title" : "web developer",
- 		"location" : "The City",
- 		"dates" : "2013 - Present",
- 		"description" : "Full stack web development"
+ 		"location" : "The City, SE",
+ 		"dates" : "2013 - 2014",
+ 		"description" : "Full stack web development, focus on HTML, CSS, JS."
+ 	},
+ 	{
+ 		"employer" : "Another Place Taker Company",
+ 		"title" : "full stack web developer",
+ 		"location" : "Another City, SW",
+ 		"dates" : "2014 - Present",
+ 		"description" : "Full stack web development, focus on JSON, mySQL."
  	}],
 
  	// display function of work
@@ -34,17 +41,15 @@
  		"title" : "Project A",
  		"dates" : "2013 - 2014",
  		"description" : "development of web applications: this is a sample description...",
- 		"images" : ["images/197x148.gif", "images/197x148.gif", 
- 					"images/197x148.gif", "images/197x148.gif",
- 					"images/197x148.gif"]
+ 		"images" : ["http://placehold.it/250x150", "http://placehold.it/350x150", 
+ 					"http://placehold.it/250x150"]
  	},
  	{
  		"title" : "Project B",
  		"dates" : "2014 - 2016",
  		"description" : "development of web back end: this is another sample description...",
- 		"images" : ["images/197x148.gif", "images/197x148.gif",
- 					"images/197x148.gif", "images/197x148.gif",
- 					"images/197x148.gif"]
+ 		"images" : ["http://placehold.it/250x150", "http://placehold.it/350x150",
+ 					"http://placehold.it/250x150"]
  	}],
 
  	// display function of projects
@@ -56,11 +61,13 @@
  			$(".project-entry:last").append(HTMLprojectTitle.replace("%data%", element.title));
  			$(".project-entry:last").append(HTMLprojectDates.replace("%data%", element.dates));
  			$(".project-entry:last").append(HTMLprojectDescription.replace("%data%", element.description));
+
  			if (element.images.length > 0)
  			{
+ 				$(".project-entry:last").append(HTMLprojectImageStart);
  				for (image in element.images)
  				{
- 					$(".project-entry:last").append(HTMLprojectImage.replace("%data%", element.images[image]));
+ 					$(".projectImage-entry:last").append(HTMLprojectImage.replace("%data%", element.images[image]));
  				}
  			}
  	    })
@@ -90,7 +97,7 @@
  		// Banner information
 		$("#header").prepend(HTMLheaderRole.replace("%data%", bio.role));
 		$("#header").prepend(HTMLheaderName.replace("%data%", bio.name));
-		$("#main").append(internationalizeButton);
+		//$("#main").append(internationalizeButton);
 		
 		// Header - Contact Information
 		$("#topContacts").append(HTMLmobile.replace("%data%", bio.contacts.mobile));

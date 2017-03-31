@@ -41,15 +41,15 @@
  		"title" : "Project A",
  		"dates" : "2013 - 2014",
  		"description" : "development of web applications: this is a sample description...",
- 		"images" : ["http://lorempixel.com/250/150/nature/1/", "http://lorempixel.com/350/150/nature/3/", 
- 					"http://lorempixel.com/250/150/nature/2/"]
+ 		"images" : ["http://lorempixel.com/400/400/nature/1/", "http://lorempixel.com/400/400/nature/3/", 
+ 					"http://lorempixel.com/400/400/nature/2/"]
  	},
  	{
  		"title" : "Project B",
  		"dates" : "2014 - 2016",
  		"description" : "development of web back end: this is another sample description...",
- 		"images" : ["http://lorempixel.com/250/150/nature/5/", "http://lorempixel.com/350/150/nature/7/",
- 					"http://lorempixel.com/250/150/nature/6/"]
+ 		"images" : ["http://lorempixel.com/400/400/nature/8", "http://lorempixel.com/400/400/nature/7/",
+ 					"http://lorempixel.com/400/400/nature/10/"]
  	}],
 
  	// display function of projects
@@ -132,15 +132,28 @@
  		"name" : "Sample University",
 		"location" : "Another City",
 		"degree" : "Bachelor of Science",
-		"majors" : ["Computer Science"],
+		"majors" : ["Computer Engineering"],
 		"dates" : "2014",
 		"url" : "www.sample.edu"
-		
+	},
+	{
+ 		"name" : "Another Sample University",
+		"location" : "The City",
+		"degree" : "Master of Science",
+		"majors" : ["Computer Science"],
+		"dates" : "2017",
+		"url" : "www.anothersample.edu"
 	}],
  	"onlineCourses":[{
 		"title" : "Basic JavaScript",
 		"school" : "Udacity",
 		"dates" : "2014.7",
+		"url" : "www.udacity.com"
+	},
+	{
+		"title" : "HTML and CSS",
+		"school" : "Udacity",
+		"dates" : "2015.9",
 		"url" : "www.udacity.com"
 	}],
 

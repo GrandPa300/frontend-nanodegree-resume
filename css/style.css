@@ -122,19 +122,19 @@ button {
 }
 
 .bioPic{
-  margin-top: -3%;
+  margin-top: -2%;
   margin-left: -0.5%;
   position: relative; 
-  float: left;
 }
 
 .boxF{
   width: 200px;
   height: 250px;
+  float: left;
   margin-right: 10px;
   overflow: hidden;
   visibility: hidden;
-  transform: rotate(120deg); 
+  transform: rotate(120deg);
   
 }
 
@@ -156,13 +156,13 @@ button {
   background-size: 125% auto; 
   visibility: visible;
 }
-
+/*
 .biopic {
   float: left;
   padding: 10px;
   width: 200px;
   display: none;
-}
+}*/
 
 .welcome-message {
   font-size: 18px;
@@ -180,8 +180,10 @@ button {
 }
 
 .projectImage-entry {
-  display: table;
-  margin: auto;
+  width: 630px;
+  height: 250px;
+  margin: 0px auto;
+  position: relative;
 }
 
 .button {
@@ -202,8 +204,8 @@ button {
 }
 
 #main{
-  max-width: 80%;
-  margin: auto;
+  max-width: 88%;
+  margin: 0 auto;
 }
 
 /* overlap footer over hexheader */
@@ -229,6 +231,10 @@ button {
 
 #workExperience{
   position: relative;
+}
+
+#projects{
+  margin-top: 1%;
 }
 
 /* 

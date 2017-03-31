@@ -121,6 +121,42 @@ button {
   float: right;
 }
 
+.bioPic{
+  margin-top: -3%;
+  margin-left: -0.5%;
+  position: relative; 
+  float: left;
+}
+
+.boxF{
+  width: 200px;
+  height: 250px;
+  margin-right: 10px;
+  overflow: hidden;
+  visibility: hidden;
+  transform: rotate(120deg); 
+  
+}
+
+.boxS{
+  width: 200px;
+  height: 250px;
+  overflow: hidden;
+  visibility: hidden;
+  transform: rotate(-60deg);
+  
+} 
+
+.boxT{
+  width: 200px;
+  height: 250px;
+  overflow: hidden;
+  transform: rotate(-60deg); 
+  background: no-repeat 50% center; 
+  background-size: 125% auto; 
+  visibility: visible;
+}
+
 .biopic {
   float: left;
   padding: 10px;

@@ -41,15 +41,15 @@
  		"title" : "Project A",
  		"dates" : "2013 - 2014",
  		"description" : "development of web applications: this is a sample description...",
- 		"images" : ["http://placehold.it/250x150", "http://placehold.it/350x150", 
- 					"http://placehold.it/250x150"]
+ 		"images" : ["http://lorempixel.com/250/150/nature/1/", "http://lorempixel.com/350/150/nature/3/", 
+ 					"http://lorempixel.com/250/150/nature/2/"]
  	},
  	{
  		"title" : "Project B",
  		"dates" : "2014 - 2016",
  		"description" : "development of web back end: this is another sample description...",
- 		"images" : ["http://placehold.it/250x150", "http://placehold.it/350x150",
- 					"http://placehold.it/250x150"]
+ 		"images" : ["http://lorempixel.com/250/150/nature/5/", "http://lorempixel.com/350/150/nature/7/",
+ 					"http://lorempixel.com/250/150/nature/6/"]
  	}],
 
  	// display function of projects
@@ -89,7 +89,7 @@
  	"welcomeMessage" : "Hello! Welcome to John Doe's resume page! This is a sample message...",
  	"skills" : ["Python", "Java", "JavaScript", "HTML", 
  	            "CSS", "JSON", "mySQL", "markdown"],
- 	"bioPic" : "images/fry.jpg",
+ 	"bioPic" : "http://lorempixel.com/400/400/people/1/",
 
  	// display function of biography.
  	display: function()
